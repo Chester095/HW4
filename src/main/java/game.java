@@ -8,7 +8,6 @@ public class game {
     public static final char DOT_AI = 'O';      // Фишка - компьютер
     public static char[][] field;                 // двумерный массив хранит текущее состояние игры
     public static Scanner sc = new Scanner(System.in);  // вспомогательный класс для ввода данных
-    public static Random rand = new Random();           // вспомогательный класс для генерации случайных чисел
 
     //    инициализация объектов игры
     public static void initialize() {
@@ -110,8 +109,6 @@ public class game {
 
     //    обработка хода компьютера
     public static void aiTurn() {
-        int[][] best;
-
         // ИЩЕМ ГДЕ БОЛЬШЕ ВСЕГО КРЕСТИКОВ и НОЛИКОВ
         int xHuman = 0;                 // строка с наибольшим кол-вом Крестиков
         int xAI = 0;                    // строка с наибольшим кол-вом Ноликов
